@@ -136,27 +136,27 @@ export default function PinnedHorizontalTrack({
               <div
                 key={item.id}
                 className={`w-[82vw] sm:w-[400px] lg:w-[480px] xl:w-[520px] flex-shrink-0 snap-center flex flex-col justify-between p-6 sm:p-8 md:p-10 lg:p-12 transition-colors duration-300 border border-mist ${
-                  isForest ? 'bg-forest text-paper' : 'bg-paper text-forest-ink'
+                  isForest ? 'bg-forest text-paper-on-dark' : 'bg-paper text-forest-ink'
                 }`}
               >
                 <div>
                   <span
                     className={`font-body text-13 block mb-3 md:mb-4 ${
-                      isForest ? 'text-paper/60' : 'text-forest-ink/60'
+                      isForest ? 'text-paper-on-dark/60' : 'text-forest-ink/60'
                     }`}
                   >
                     {item.subtitle}
                   </span>
                   <h3
                     className={`font-display text-21 sm:text-26 md:text-33 mb-3 md:mb-4 leading-snug ${
-                      isForest ? 'text-paper' : 'text-forest-ink'
+                      isForest ? 'text-paper-on-dark' : 'text-forest-ink'
                     }`}
                   >
                     {item.title}
                   </h3>
                   <p
                     className={`font-body text-15 md:text-17 leading-relaxed mb-6 md:mb-8 ${
-                      isForest ? 'text-paper/80' : 'text-forest-ink/80'
+                      isForest ? 'text-paper-on-dark/80' : 'text-forest-ink/80'
                     }`}
                   >
                     {item.description}
@@ -168,7 +168,7 @@ export default function PinnedHorizontalTrack({
                     href={item.href}
                     className={`inline-flex items-center gap-2 font-body text-15 font-medium transition-all ${
                       isForest
-                        ? 'text-paper hover:text-lime'
+                        ? 'text-paper-on-dark hover:text-lime'
                         : 'text-forest hover:text-forest-light'
                     }`}
                   >
@@ -176,7 +176,7 @@ export default function PinnedHorizontalTrack({
                   </Link>
                   <span
                     className={`font-body text-13 tabular-nums ${
-                      isForest ? 'text-paper/40' : 'text-forest-ink/40'
+                      isForest ? 'text-paper-on-dark/40' : 'text-forest-ink/40'
                     }`}
                   >
                     0{idx + 1}
@@ -194,7 +194,7 @@ export default function PinnedHorizontalTrack({
           <span
             key={idx}
             className={`w-2 h-2 rounded-full transition-all ${
-              idx === currentIndex - 1 ? 'bg-[#2C2925] w-4' : 'bg-[#DED6C9]'
+              idx === currentIndex - 1 ? 'bg-[#190625] w-4' : 'bg-[#51335F]'
             }`}
           />
         ))}

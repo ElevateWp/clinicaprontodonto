@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Contato & Localização | Studio Oral Vitta - Rio Branco',
+  title: 'Contato & Localização | Clinica Prontodonto - Manaus',
   description:
-    'Entre em contato com a Studio Oral Vitta em Rio Branco, Acre. Telefone: +55 68 98108-1266.',
+    'Entre em contato com a Clinica Prontodonto em Manaus, Amazonas. Telefone e WhatsApp: +55 92 99120-1714.',
   pathname: '/contact/',
 });
 
@@ -33,8 +33,16 @@ export default function ContactPage() {
                 </span>
                 <WordRevealH1 text="Fale com nossa equipe odontológica." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Entre em contato com a Studio Oral Vitta em Rio Branco, Acre.
+                  Entre em contato com a Clinica Prontodonto em Compensa 1, Manaus, Amazonas.
                 </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <span className="bg-mist/80 text-forest-ink font-body text-12 px-3 py-1 rounded-full font-medium">
+                    ✓ LGBTQ+ friendly
+                  </span>
+                  <span className="bg-mist/80 text-forest-ink font-body text-12 px-3 py-1 rounded-full font-medium">
+                    ✓ Empresa de liderança feminina (Women-owned)
+                  </span>
+                </div>
               </AnimateOnScroll>
             </div>
           </div>
@@ -62,7 +70,7 @@ export default function ContactPage() {
                       <div>
                         <span className="font-body text-13 text-forest font-semibold block">WhatsApp Direto</span>
                         <a
-                          href="https://api.whatsapp.com/send?phone=5568981081266"
+                          href={CLINIC_INFO.contact.whatsappLink || `https://api.whatsapp.com/send?phone=5592991201714&text=Seja+bem+vindo+a+Prontodonto%21`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-display text-21 text-forest font-bold hover:underline"
@@ -84,9 +92,26 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest-ink/60">Seg – Sex (08:00 – 18:00)</span>
+                      <span className="font-body text-13 text-forest-ink/60">Atendimento Clínico</span>
                     </div>
 
+                    {/* Instagram */}
+                    {CLINIC_INFO.contact.instagram && (
+                      <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                          <span className="font-body text-13 text-forest-ink/60 block">Instagram Oficial</span>
+                          <a
+                            href={CLINIC_INFO.contact.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-display text-18 text-forest hover:underline"
+                          >
+                            @clinicaprontodonto
+                          </a>
+                        </div>
+                        <span className="font-body text-13 text-forest-ink/60">Acompanhe novidades</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -132,19 +157,19 @@ export default function ContactPage() {
 
               {/* Stylized Palette Map */}
               <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.2}>
-                <div className="p-8 bg-forest text-paper flex flex-col justify-between aspect-[16/10] shadow-sm">
+                <div className="p-8 bg-forest text-paper-on-dark flex flex-col justify-between aspect-[16/10] shadow-sm">
                   <div>
                     <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
                       Localização no Google Maps & Plus Code
                     </span>
-                    <h3 className="font-display text-26 text-paper mb-2">
-                      Studio Oral Vitta
+                    <h3 className="font-display text-26 text-paper-on-dark mb-2">
+                      Clinica Prontodonto
                     </h3>
-                    <p className="font-body text-13 text-paper/80 leading-relaxed">
+                    <p className="font-body text-13 text-paper-on-dark/80 leading-relaxed">
                       {CLINIC_INFO.primaryLocation.directions}
                     </p>
                     <div className="mt-3 inline-flex items-center gap-2 bg-paper/10 px-3 py-1 text-lime font-body text-13">
-                      <span>★ 5.0 Avaliação (5 avaliações no Google)</span>
+                      <span>★ 4.7 Avaliação (42 avaliações no Google Maps)</span>
                     </div>
                   </div>
 
@@ -159,7 +184,7 @@ export default function ContactPage() {
                       Abrir no Google Maps
                     </Button>
                     <a
-                      href="https://api.whatsapp.com/send?phone=5568981081266"
+                      href={CLINIC_INFO.contact.whatsappLink || `https://api.whatsapp.com/send?phone=5592991201714&text=Seja+bem+vindo+a+Prontodonto%21`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-body text-13 text-lime hover:underline font-semibold"
@@ -175,14 +200,14 @@ export default function ContactPage() {
       </section>
 
       {/* SECTION 8: Final Contact / Appointment CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Agendamento de Consulta
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
                 Pronto para agendar sua avaliação?
               </h2>
             </div>

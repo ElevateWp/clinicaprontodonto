@@ -2,6 +2,7 @@ export interface DentistProfile {
   id: string;
   slug: string;
   name: string;
+  image: string;
   title: string;
   qualifications: string;
   specialization: string;
@@ -11,8 +12,6 @@ export interface DentistProfile {
   education: string[];
   memberships: string[];
   specialties: string[];
-  image: string;
-  warmImage: string;
 }
 
 export interface ServiceDetail {
@@ -60,13 +59,15 @@ export interface ClinicInformation {
     country: string;
     directions: string;
     landmarks: string;
-  coordinates?: { lat: number; lng: number };
+    coordinates?: { lat: number; lng: number };
   };
   contact: {
     phone: string;
     emergencyPhone: string;
-  email?: string;
+    email?: string;
     whatsapp: string;
+    whatsappLink?: string;
+    instagram?: string;
   };
   schedule: { day: string; hours: string; isOpenToday?: boolean; isEmergencyOnly?: boolean }[];
   verifiedStats: { value: number; suffix: string; label: string; description: string }[];
@@ -74,43 +75,47 @@ export interface ClinicInformation {
 }
 
 export const CLINIC_INFO: ClinicInformation = {
-  name: "Studio Oral Vitta",
-  legalName: "Studio Oral Vitta",
-  tagline: "Clínica odontológica em Floresta, Rio Branco, Acre.",
+  name: "Clinica Prontodonto",
+  legalName: "Clinica Prontodonto",
+  tagline: "Clínica odontológica em Compensa 1, Manaus - AM.",
   establishedYear: 2018,
   primaryLocation: {
-    street: "Rua Primeiro de Maio, R. Boa Vista, 7 - Conjunto - Floresta",
+    street: "Avenida Brasil, 12A Compensa 1",
     suite: "",
-    city: "Rio Branco",
-    state: "AC",
-    postalCode: "69911-331",
+    city: "Manaus",
+    state: "AM",
+    postalCode: "69036-110",
     country: "Brazil",
-    directions: "Rua Primeiro de Maio, R. Boa Vista, 7 - Conjunto - Floresta, Rio Branco - AC, 69911-331, Brazil",
-    landmarks: "25GC+M3 Floresta, Rio Branco - Acre, Brazil",
+    directions: "Avenida Brasil, 12A Compensa 1, Manaus - AM, 69036-110, Brazil",
+    landmarks: "VWVW+2R Manaus, Amazonas, Brazil",
+    coordinates: { lat: -3.1118, lng: -60.0543 },
   },
   contact: {
-    phone: "+55 68 98108-1266",
-    emergencyPhone: "+55 68 98108-1266",
-    whatsapp: "+55 68 98108-1266",
+    phone: "+55 92 99120-1714",
+    emergencyPhone: "+55 92 99120-1714",
+    whatsapp: "+55 92 99120-1714",
+    whatsappLink: "https://api.whatsapp.com/send?phone=5592991201714&text=Seja+bem+vindo+a+Prontodonto%21",
+    instagram: "https://instagram.com/clinicaprontodonto?igshid=YmMyMTA2M2Y=",
   },
   schedule: [
-    { day: "Monday", hours: "8:00 AM – 6:00 PM" },
-    { day: "Tuesday", hours: "8:00 AM – 6:00 PM" },
-    { day: "Wednesday", hours: "8:00 AM – 6:00 PM" },
-    { day: "Thursday", hours: "8:00 AM – 6:00 PM" },
-    { day: "Friday", hours: "8:00 AM – 6:00 PM" },
-    { day: "Saturday", hours: "8:00 AM – 12:00 PM" },
+    { day: "Monday", hours: "8:30 AM–12:00 PM, 2:00 PM–10:00 PM" },
+    { day: "Tuesday", hours: "Open 24 hours" },
+    { day: "Wednesday", hours: "8:30 AM–12:00 PM, 2:00 PM–10:00 PM" },
+    { day: "Thursday", hours: "9:00 AM–10:00 PM" },
+    { day: "Friday", hours: "Open 24 hours" },
+    { day: "Saturday", hours: "8:30 AM–5:00 PM" },
     { day: "Sunday", hours: "Closed" },
   ],
   verifiedStats: [
-    { value: 5.0, suffix: " ★", label: "Avaliação no Google", description: "Nota 5.0 com base em 5 avaliações no Google Maps." },
-    { value: 5, suffix: "", label: "Avaliações no Google", description: "Cinco avaliações compartilhadas no Google Maps." },
+    { value: 4.7, suffix: " ★", label: "Avaliação no Google", description: "Nota 4.7 com base em 42 avaliações no Google Maps." },
+    { value: 42, suffix: "", label: "Avaliações no Google", description: "42 avaliações verificadas de pacientes no Google Maps." },
   ],
   accreditations: [
-    "Clínica odontológica em Rio Branco, Acre",
-    "Atendimento conforme informações da clínica",
-    "Avaliação 5.0 Estrelas no Google Maps",
-    "Floresta, Rio Branco - AC",
+    "Clínica odontológica em Manaus, Amazonas",
+    "Avaliação 4.7 Estrelas (42 avaliações no Google)",
+    "Atendimento LGBTQ+ friendly",
+    "Empresa de liderança feminina (Women-owned)",
+    "Compensa 1, Manaus - AM",
   ],
 };
 
@@ -118,18 +123,17 @@ export const DENTISTS: DentistProfile[] = [
   {
     id: "dental-studio-doctor",
     slug: "dental-studio-doctor",
-    name: "Dr. Fernando",
+    name: "Dr. Luis Carlos Buco",
+    image: "/images/dr-luis-carlos-buco.png",
     title: "Dentista",
     qualifications: "",
     specialization: "Atendimento odontológico",
     experienceYears: 0,
-    bio: "Dr. Fernando faz parte da equipe da Studio Oral Vitta.",
+    bio: "Dr. Luis Carlos Buco faz parte da equipe da Clinica Prontodonto em Manaus.",
     philosophy: "Atendimento acolhedor, respeitoso e atento às necessidades de cada paciente.",
-    education: ["Informações profissionais serão adicionadas em breve."],
+    education: ["Informações profissionais disponíveis na clínica."],
     memberships: [],
-    specialties: ["Atendimento odontológico"],
-    image: "/images/dr-fernando.png",
-    warmImage: "/images/dr-fernando.png",
+    specialties: ["Atendimento odontológico", "Clínica completa"],
   },
 ];
 
@@ -170,7 +174,7 @@ export const SERVICES: ServiceDetail[] = [
         stepNumber: 2,
         title: "Instalação do Implante & Carga Imediata",
         duration: "60–90 minutos",
-        description: "Procedimento realizado com anestesia local de alta eficácia e conforto total pelo Dr. Fernando.",
+        description: "Procedimento realizado com anestesia local de alta eficácia e conforto total pelo Dr. Luis Carlos Buco.",
         clinicalDetails: "Verificação da estabilidade primária imediata para fixação do elemento protético.",
       },
       {
@@ -202,7 +206,7 @@ export const SERVICES: ServiceDetail[] = [
       ],
       whatIsIncluded: [
         "Avaliação clínica completa e planejamento digital",
-        "Instalação cirúrgica pelo Dr. Fernando",
+        "Instalação cirúrgica pelo Dr. Luis Carlos Buco",
         "Componentes e implantes certificados de alta qualidade",
         "Acompanhamento pós-operatório atencioso",
       ],
@@ -210,7 +214,7 @@ export const SERVICES: ServiceDetail[] = [
     },
     beforeAfterCase: {
       category: "Implante com Carga Imediata",
-      clinicalContext: "Paciente restaurado com implante dentário de carga imediata pelo Dr. Fernando, recuperando sorriso e função em 1 dia.",
+      clinicalContext: "Paciente restaurado com implante dentário de carga imediata pelo Dr. Luis Carlos Buco, recuperando sorriso e função em 1 dia.",
       beforeLabel: "Pré-operatório: Ausência Dentária",
       afterLabel: "Pós-operatório: Sorriso Recuperado em 1 Dia",
       beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
@@ -229,7 +233,7 @@ export const SERVICES: ServiceDetail[] = [
       },
       {
         question: "O consultório oferece atendimento domiciliar?",
-        answer: "Sim! O Dr. Fernando disponibiliza atendimento de odontologia domiciliar com estrutura portátil especializada para pacientes com mobilidade reduzida.",
+        answer: "Sim! O Dr. Luis Carlos Buco disponibiliza atendimento de odontologia domiciliar com estrutura portátil especializada para pacientes com mobilidade reduzida.",
       },
     ],
   },
@@ -239,7 +243,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Root Canal",
     tagline: "Tratamento endodôntico seguro e confortável para preservar dentes naturais e eliminar a dor.",
     shortDescription: "Procedimento endodôntico avançado para remoção de infecções na polpa dentária, esterilização dos canais e alívio imediato do desconforto.",
-    clinicalExplanation: "O tratamento de canal é realizado quando a polpa dentária sofre inflamação ou infecção por cárie profunda ou trauma. A Dr. Fernando utiliza instrumentos rotatórios e técnicas modernas para limpar, descontaminar e selar o canal com segurança e suavidade, preservando o dente natural.",
+    clinicalExplanation: "O tratamento de canal é realizado quando a polpa dentária sofre inflamação ou infecção por cárie profunda ou trauma. A Dr. Luis Carlos Buco utiliza instrumentos rotatórios e técnicas modernas para limpar, descontaminar e selar o canal com segurança e suavidade, preservando o dente natural.",
     whoNeeds: [
       "Dor de dente intensa, espontânea ou pulsátil.",
       "Sensibilidade prolongada a alimentos quentes ou frios.",
@@ -269,7 +273,7 @@ export const SERVICES: ServiceDetail[] = [
         stepNumber: 2,
         title: "Limpeza & Instrumentação Rotatória",
         duration: "40 minutos",
-        description: "Remoção precisa do tecido inflamado e modelagem suave dos canais radiculares pelo Dr. Fernando.",
+        description: "Remoção precisa do tecido inflamado e modelagem suave dos canais radiculares pelo Dr. Luis Carlos Buco.",
         clinicalDetails: "Localizador apical eletrônico para garantir o comprimento de trabalho ideal.",
       },
       {
@@ -300,14 +304,14 @@ export const SERVICES: ServiceDetail[] = [
       ],
       whatIsIncluded: [
         "Radiografias periapicais de diagnóstico e controle",
-        "Instrumentação rotatória e obturação pelo Dr. Fernando",
+        "Instrumentação rotatória e obturação pelo Dr. Luis Carlos Buco",
         "Curativo antimicrobiano e selamento provisório",
       ],
       note: "Condições facilitadas e atendimento prioritário para alívio da dor.",
     },
     beforeAfterCase: {
       category: "Tratamento Endodôntico",
-      clinicalContext: "Paciente com dor aguda atendido com tratamento de canal moderno e seguro pelo Dr. Fernando.",
+      clinicalContext: "Paciente com dor aguda atendido com tratamento de canal moderno e seguro pelo Dr. Luis Carlos Buco.",
       beforeLabel: "Pré-tratamento: Lesão Periapical e Dor",
       afterLabel: "Pós-tratamento: Canal Selado & Dente Salvo",
       beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
@@ -332,7 +336,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Teeth Whitening",
     tagline: "Clareamento dental seguro e monitorado para um sorriso iluminado com proteção ao esmalte.",
     shortDescription: "Técnicas de clareamento em consultório e caseiro supervisionado para remoção de manchas e rejuvenescimento do sorriso sem agredir os dentes.",
-    clinicalExplanation: "O clareamento dental no Dental Studio utiliza géis clareadores certificados e proteção gengival rigorosa. Supervisionado pelo Dr. Fernando, o procedimento quebra moléculas de pigmentos acumuladas por café, chá e tempo sem alterar a densidade mineral do esmalte.",
+    clinicalExplanation: "O clareamento dental no Dental Studio utiliza géis clareadores certificados e proteção gengival rigorosa. Supervisionado pelo Dr. Luis Carlos Buco, o procedimento quebra moléculas de pigmentos acumuladas por café, chá e tempo sem alterar a densidade mineral do esmalte.",
     whoNeeds: [
       "Pessoas com dentes amarelados ou escurecidos por alimentação e hábitos diários.",
       "Pacientes que desejam valorizar o sorriso para eventos e autoestima.",
@@ -393,7 +397,7 @@ export const SERVICES: ServiceDetail[] = [
     },
     beforeAfterCase: {
       category: "Clareamento Dental",
-      clinicalContext: "Paciente com escurecimento dental restaurado para um tom brilhante e natural pelo Dr. Fernando.",
+      clinicalContext: "Paciente com escurecimento dental restaurado para um tom brilhante e natural pelo Dr. Luis Carlos Buco.",
       beforeLabel: "Pré-tratamento: Dentes Amarelados",
       afterLabel: "Pós-tratamento: Sorriso Iluminado",
       beforeImage: "/images/teeth-whitening-before.jpg",
@@ -412,7 +416,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Dental Cleaning",
     tagline: "Profilaxia, raspagem ultrassônica e cuidado gengival preventivo.",
     shortDescription: "Limpeza dental profissional com ultrassom e polimento coronário para eliminação do tártaro, placa bacteriana e prevenção de gengivite.",
-    clinicalExplanation: "A profilaxia e raspagem periodontal removem tártaro acumulado e biofilme bacteriano. Conduzida com atenção minuciosa pelo Dr. Fernando, a limpeza dental previne sangramentos, retração gengival e perda óssea, mantendo seu hálito fresco e gengivas saudáveis.",
+    clinicalExplanation: "A profilaxia e raspagem periodontal removem tártaro acumulado e biofilme bacteriano. Conduzida com atenção minuciosa pelo Dr. Luis Carlos Buco, a limpeza dental previne sangramentos, retração gengival e perda óssea, mantendo seu hálito fresco e gengivas saudáveis.",
     whoNeeds: [
       "Todos os pacientes a cada 6 meses para manutenção preventiva.",
       "Pessoas com sangramento ao escovar ou passar fio dental.",
@@ -473,7 +477,7 @@ export const SERVICES: ServiceDetail[] = [
     },
     beforeAfterCase: {
       category: "Saúde Gengival",
-      clinicalContext: "Remoção completa de placa e cálculo dental com recuperação da saúde gengival pelo Dr. Fernando.",
+      clinicalContext: "Remoção completa de placa e cálculo dental com recuperação da saúde gengival pelo Dr. Luis Carlos Buco.",
       beforeLabel: "Pré-tratamento: Tártaro & Inflamação",
       afterLabel: "Pós-tratamento: Gengiva Rosa & Saudável",
       beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
@@ -492,7 +496,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Braces & Orthodontics",
     tagline: "Aparelhos ortodônticos convencionais, estéticos e alinhadores para o alinhamento ideal do seu sorriso.",
     shortDescription: "Tratamento ortodôntico completo em Manaus com aparelhos metálicos, cerâmicos e alinhadores invisíveis para corrigir apinhamento, mordida e estética facial.",
-    clinicalExplanation: "O tratamento com aparelhos ortodônticos corrige o posicionamento dos dentes e das bases ósseas, proporcionando uma mordida equilibrada e um sorriso harmônico. Na Dental Studio, o Dr. Fernando oferece opções metálicas, estéticas e alinhadores modernos.",
+    clinicalExplanation: "O tratamento com aparelhos ortodônticos corrige o posicionamento dos dentes e das bases ósseas, proporcionando uma mordida equilibrada e um sorriso harmônico. Na Dental Studio, o Dr. Luis Carlos Buco oferece opções metálicas, estéticas e alinhadores modernos.",
     whoNeeds: [
       "Dentes tortos, apinhados ou com espaços (diastemas).",
       "Problemas de mordida cruzada, sobremordida ou mordida aberta.",
@@ -572,7 +576,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Cosmetic Dentistry",
     tagline: "Lentes de contato dental, facetas em resina e cerâmica com planejamento estético.",
     shortDescription: "Reabilitação estética personalizada para transformar forma, cor e alinhamento do sorriso com naturalidade e alta resistência.",
-    clinicalExplanation: "A odontologia estética no Dental Studio combina arte, precisão e materiais de alta tecnologia. Conduzido pelo Dr. Fernando, o tratamento com facetas e restaurações estéticas reproduz a textura e translucidez do esmalte natural com mínima intervenção.",
+    clinicalExplanation: "A odontologia estética no Dental Studio combina arte, precisão e materiais de alta tecnologia. Conduzido pelo Dr. Luis Carlos Buco, o tratamento com facetas e restaurações estéticas reproduz a textura e translucidez do esmalte natural com mínima intervenção.",
     whoNeeds: [
       "Dentes desgastados, fraturados ou com formato irregular.",
       "Manchas resistentes que não saem com clareamento convencional.",
@@ -599,7 +603,7 @@ export const SERVICES: ServiceDetail[] = [
         stepNumber: 2,
         title: "Preparo Conservador & Moldagem/Escaneamento",
         duration: "90 minutos",
-        description: "Preparo minimamente invasivo preservando o máximo de estrutura dental pelo Dr. Fernando.",
+        description: "Preparo minimamente invasivo preservando o máximo de estrutura dental pelo Dr. Luis Carlos Buco.",
         clinicalDetails: "Moldagem de precisão enviada para laboratório especializado.",
       },
       {
@@ -626,14 +630,14 @@ export const SERVICES: ServiceDetail[] = [
       factors: ["Número de dentes envolvidos e tipo de material (resina composta estratificada ou cerâmica pura)."],
       whatIsIncluded: [
         "Planejamento estético individualizado",
-        "Procedimentos clínicos com o Dr. Fernando",
+        "Procedimentos clínicos com o Dr. Luis Carlos Buco",
         "Materiais certificados de alta estética",
       ],
       note: "Excelente investimento na sua autoconfiança e imagem pessoal.",
     },
     beforeAfterCase: {
       category: "Estética do Sorriso",
-      clinicalContext: "Transformação estética do sorriso realizada com restaurações cerâmicas pelo Dr. Fernando.",
+      clinicalContext: "Transformação estética do sorriso realizada com restaurações cerâmicas pelo Dr. Luis Carlos Buco.",
       beforeLabel: "Pré-tratamento: Desgastes e Assimetria",
       afterLabel: "Pós-tratamento: Sorriso Renovado e Harmônico",
       beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
@@ -713,7 +717,7 @@ export const EMERGENCY_CONDITIONS: EmergencyCondition[] = [
       "Febre ou gosto ruim na boca",
     ],
     immediateAction: [
-      "Ligue imediatamente para nosso plantão de atendimento (+55 92 98479-8868).",
+      "Ligue imediatamente para nosso plantão de atendimento (+55 92 99120-1714).",
       "Use compressa fria externamente; NÃO aplique calor.",
       "Mantenha a cabeça elevada ao deitar.",
     ],
@@ -752,7 +756,7 @@ export const BLOG_POSTS: BlogPost[] = [
     leadImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "dental-implants",
     content: {
-      intro: "A tecnologia de implantes dentários com carga imediata representa uma grande evolução para quem deseja rapidez e conforto na reposição de dentes. Sob os protocolos do Dr. Fernando em Manaus, é possível recuperar seu sorriso em 1 dia.",
+      intro: "A tecnologia de implantes dentários com carga imediata representa uma grande evolução para quem deseja rapidez e conforto na reposição de dentes. Sob os protocolos do Dr. Luis Carlos Buco em Manaus, é possível recuperar seu sorriso em 1 dia.",
       sections: [
         {
           heading: "O que é Carga Imediata?",
@@ -780,7 +784,7 @@ export const BLOG_POSTS: BlogPost[] = [
     leadImage: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "root-canal",
     content: {
-      intro: "Preservar a estrutura dental natural mantém a sensibilidade mastigatória e o equilíbrio da arcada. A Dr. Fernando destaca os avanços que tornam o tratamento de canal seguro e tranquilo.",
+      intro: "Preservar a estrutura dental natural mantém a sensibilidade mastigatória e o equilíbrio da arcada. A Dr. Luis Carlos Buco destaca os avanços que tornam o tratamento de canal seguro e tranquilo.",
       sections: [
         {
           heading: "A Precisão dos Instrumentos Rotatórios",
@@ -829,7 +833,7 @@ export const BLOG_POSTS: BlogPost[] = [
     leadImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "cosmetic-dentistry",
     content: {
-      intro: "O Dr. Fernando realiza atendimentos de odontologia domiciliar em Manaus, levando consultório portátil e cuidado humanizado até a residência dos pacientes.",
+      intro: "O Dr. Luis Carlos Buco realiza atendimentos de odontologia domiciliar em Manaus, levando consultório portátil e cuidado humanizado até a residência dos pacientes.",
       sections: [
         {
           heading: "Quem Pode se Beneficiar?",
@@ -843,23 +847,23 @@ export const BLOG_POSTS: BlogPost[] = [
 export const PATIENT_REVIEWS = [
   {
     id: "review-1",
-    author: "Marcelo Sanchez",
-    treatment: "Avaliação no Google · 2 anos atrás",
-    quote: "Excellent service, attentive staff, Dr. Fernando is a very nice person, the secretary treated me very well, the place is well air-conditioned and beautiful. I highly recommend it.",
+    author: "Ana Cláudia Andrade",
+    treatment: "Avaliação no Google · 4 meses atrás",
+    quote: "Personalized service, from reception to consultation. Excellent professionals who listen to the story to understand each case and thus be able to guide us and perform the indicated procedure. Prontodonto deserves congratulations!",
     year: "★★★★★",
   },
   {
     id: "review-2",
-    author: "ryan mello",
-    treatment: "Avaliação no Google · 2 anos atrás",
-    quote: "Excellent!! The best dental clinic in Rio Branco. The service was superb from reception to the end of all procedures.",
+    author: "Walcilene Mendonça dos Santos",
+    treatment: "Avaliação no Google · 4 meses atrás",
+    quote: "I congratulate the entire team at this renowned clinic for the excellent care and support offered to patients. It's an environment that conveys care, respect, humanity, and professionalism in every detail.",
     year: "★★★★★",
   },
   {
     id: "review-3",
-    author: "Francisca Amaral",
-    treatment: "Avaliação no Google · 2 anos atrás",
-    quote: "It was wonderful, excellent service.",
+    author: "Getulio Cordeiro",
+    treatment: "Avaliação no Google · 4 meses atrás",
+    quote: "My experience with Prontodonto has always been wonderful! I've taken my daughter there, and I also receive treatment along with my whole family, and we've always been very well received. What we like most is the trust and peace of mind that we receive.",
     year: "★★★★★",
   },
 ];

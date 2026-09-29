@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'teeth-whitening')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Clareamento Dental em Manaus | Dr. Fernando',
+  title: 'Clareamento Dental em Manaus | Dr. Luis Carlos Buco',
   description:
-    'Clareamento dental em consultório e caseiro supervisionado com segurança e proteção ao esmalte pelo Dr. Fernando em Manaus.',
+    'Clareamento dental em consultório e caseiro supervisionado com segurança e proteção ao esmalte pelo Dr. Luis Carlos Buco em Manaus.',
   pathname: '/teeth-whitening/',
 });
 
@@ -335,14 +335,14 @@ export default function TeethWhiteningPage() {
       </section>
 
       {/* SECTION 10: Appointment CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Brighten Your Enamel
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
                 Schedule your prescription whitening visit
               </h2>
             </div>

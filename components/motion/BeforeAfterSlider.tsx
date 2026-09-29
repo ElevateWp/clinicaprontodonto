@@ -123,7 +123,7 @@ export default function BeforeAfterSlider({
             sizes="(max-width: 1200px) 100vw, 1200px"
             className="object-cover"
           />
-          <div className="absolute bottom-4 right-4 bg-forest/80 backdrop-blur-sm text-paper font-body text-13 px-3 py-1">
+          <div className="absolute bottom-4 right-4 bg-forest/80 backdrop-blur-sm text-paper-on-dark font-body text-13 px-3 py-1">
             {afterLabel}
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function BeforeAfterSlider({
             sizes="(max-width: 1200px) 100vw, 1200px"
             className="object-cover"
           />
-          <div className="absolute bottom-4 left-4 bg-forest/80 backdrop-blur-sm text-paper font-body text-13 px-3 py-1">
+          <div className="absolute bottom-4 left-4 bg-forest/80 backdrop-blur-sm text-paper-on-dark font-body text-13 px-3 py-1">
             {beforeLabel}
           </div>
         </div>

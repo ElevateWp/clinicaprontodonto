@@ -8,19 +8,21 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dentalstudiomanaus.com.br'),
+  metadataBase: new URL('https://clinicaprontodonto.com.br'),
   title: {
-    default: 'Studio Oral Vitta | Clínica Odontológica em Rio Branco',
-    template: '%s | Studio Oral Vitta',
+    default: 'clinica prontodonto',
+    template: '%s | Clinica Prontodonto',
   },
   description:
-    'Studio Oral Vitta, clínica odontológica em Floresta, Rio Branco - Acre. Telefone: +55 68 98108-1266.',
+    'Clinica Prontodonto (4.7 ★ no Google com 42 avaliações), clínica odontológica em Compensa 1, Manaus - AM. Telefone/WhatsApp: +55 92 99120-1714.',
   keywords: [
-    'Studio Oral Vitta',
-    'Clínica Odontológica Rio Branco',
-    'Dentista Floresta Rio Branco',
+    'Clinica Prontodonto',
+    'Prontodonto Manaus',
+    'Clínica Odontológica Manaus',
+    'Dentista Compensa 1 Manaus',
+    'Dentista Manaus',
   ],
-  authors: [{ name: 'Studio Oral Vitta' }],
+  authors: [{ name: 'Clinica Prontodonto' }],
   icons: {
     icon: [
       { url: '/images/logo.png', sizes: '32x32', type: 'image/png' },
@@ -46,7 +48,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F1EEE8] selection:text-[#2C2925]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#321047] selection:text-[#190625]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">

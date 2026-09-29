@@ -54,7 +54,7 @@ export default function PanelWipe({ children, className = '', as: Component = 's
   return (
     <Component
       ref={panelRef}
-      className={`relative w-full bg-forest text-paper overflow-hidden ${className}`}
+      className={`relative w-full bg-forest text-paper-on-dark overflow-hidden ${className}`}
     >
       {children}
     </Component>

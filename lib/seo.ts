@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'https://dentalstudiomanaus.com.br';
+export const BASE_URL = 'https://clinicaprontodonto.com.br';
 
 export function createMetadata({
   title,
@@ -15,8 +15,8 @@ export function createMetadata({
   image?: string;
 }): Metadata {
   const url = `${BASE_URL}${pathname}`;
-  const fullTitle = `${title} | ${CLINIC_INFO.name}`;
-  const defaultImage = `${BASE_URL}/images/og-nova-dental.jpg`;
+  const fullTitle = pathname === "/" ? "clinica prontodonto" : `${title} | ${CLINIC_INFO.name}`;
+  const defaultImage = `${BASE_URL}/images/logo.png`;
 
   return {
     title: fullTitle,
@@ -70,9 +70,14 @@ export function generateLocalBusinessSchema() {
     url: BASE_URL,
     telephone: CLINIC_INFO.contact.phone,
     priceRange: '$$',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.7',
+      reviewCount: '42',
+    },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: `${CLINIC_INFO.primaryLocation.street}, ${CLINIC_INFO.primaryLocation.suite}`,
+      streetAddress: `${CLINIC_INFO.primaryLocation.street}`,
       addressLocality: CLINIC_INFO.primaryLocation.city,
       addressRegion: CLINIC_INFO.primaryLocation.state,
       postalCode: CLINIC_INFO.primaryLocation.postalCode,
@@ -86,15 +91,27 @@ export function generateLocalBusinessSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
-        closes: '18:00',
+        dayOfWeek: ['Tuesday', 'Friday'],
+        opens: '00:00',
+        closes: '23:59',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Wednesday'],
+        opens: '08:30',
+        closes: '22:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Thursday'],
+        opens: '09:00',
+        closes: '22:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Saturday'],
-        opens: '08:00',
-        closes: '12:00',
+        opens: '08:30',
+        closes: '17:00',
       },
     ],
     medicalSpecialty: [

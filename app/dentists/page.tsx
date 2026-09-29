@@ -12,9 +12,9 @@ import { DENTISTS, SERVICES, CLINIC_INFO } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Equipe Clínica | Dr. Fernando',
+  title: 'Equipe Clínica | Dr. Luis Carlos Buco',
   description:
-    'Conheço Dr. Fernando, o profissional da Dental Studio em Manaus.',
+    'Conheço Dr. Luis Carlos Buco, o profissional da Dental Studio em Manaus.',
   pathname: '/dentists/',
 });
 
@@ -24,7 +24,7 @@ export default function DentistsPage() {
       {/* SECTION 1: Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Dr. Fernando', path: '/dentists/' }]} />
+          <Breadcrumbs items={[{ name: 'Dr. Luis Carlos Buco', path: '/dentists/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
@@ -34,7 +34,7 @@ export default function DentistsPage() {
                 </span>
                 <WordRevealH1 text="Atendimento odontológico dedicado, ágil e humanizado." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Dr. Fernando atende na Dental Studio, oferecendo cuidado odontológico acolhedor em Manaus." />
+                  <ScrubbedParagraph text="Dr. Luis Carlos Buco atende na Dental Studio, oferecendo cuidado odontológico acolhedor em Manaus." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -62,7 +62,7 @@ export default function DentistsPage() {
                 Perfil do Profissional
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Dr. Fernando
+                Dr. Luis Carlos Buco
               </h2>
             </div>
           </AnimateOnScroll>
@@ -101,7 +101,7 @@ export default function DentistsPage() {
                     Implantes & Carga Imediata
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Técnica de carga imediata que pode trazer seu sorriso em 1 dia, sob responsabilidade do Dr. Fernando.
+                    Técnica de carga imediata que pode trazer seu sorriso em 1 dia, sob responsabilidade do Dr. Luis Carlos Buco.
                   </p>
                 </div>
                 <Link href="/dental-implants/" className="font-body text-13 text-forest font-medium hover:underline">
@@ -133,7 +133,7 @@ export default function DentistsPage() {
                     Aparelhos Ortodônticos
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Aparelhos metálicos, estéticos e alinhadores para todas as idades com o Dr. Fernando.
+                    Aparelhos metálicos, estéticos e alinhadores para todas as idades com o Dr. Luis Carlos Buco.
                   </p>
                 </div>
                 <Link href="/braces/" className="font-body text-13 text-forest font-medium hover:underline">
@@ -219,7 +219,7 @@ export default function DentistsPage() {
                   “Implantes carga imediata pode trazer seu sorriso em 1 dia — unindo tecnologia, agilidade e o acolhimento que você merece.”
                 </span>
                 <span className="font-body text-13 text-forest block mt-2 font-medium">
-                  — Dr. Fernando, Responsável Técnico
+                  — Dr. Luis Carlos Buco, Responsável Técnico
                 </span>
               </div>
             </div>
@@ -262,15 +262,15 @@ export default function DentistsPage() {
       </section>
 
       {/* SECTION 7: Appointment CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Agendamento
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
-                Agende sua consulta com o Dr. Fernando
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
+                Agende sua consulta com o Dr. Luis Carlos Buco
               </h2>
             </div>
           </AnimateOnScroll>

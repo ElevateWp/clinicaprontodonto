@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Agendar Consulta Odontológica | Dr. Fernando',
+  title: 'Agendar Consulta Odontológica | Clinica Prontodonto',
   description:
-    'Solicite seu agendamento para implantes de carga imediata em 1 dia, odontologia domiciliar ou aparelhos ortodônticos com o Dr. Fernando em Manaus.',
+    'Solicite seu agendamento na Clinica Prontodonto para implantes, odontologia domiciliar ou aparelhos ortodônticos em Manaus.',
   pathname: '/book-appointment/',
 });
 
@@ -34,7 +34,7 @@ const BOOKING_STEPS = [
   {
     step: 4,
     title: 'Atendimento Atencioso',
-    description: 'Venha ao consultório ou receba o atendimento de odontologia domiciliar no conforto da sua casa.',
+    description: 'Venha à clínica na Compensa 1 ou receba atendimento de odontologia domiciliar no conforto da sua casa.',
   },
 ];
 
@@ -54,7 +54,7 @@ export default function BookAppointmentPage() {
                 </span>
                 <WordRevealH1 text="Reserve sua avaliação odontológica." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Agende sua consulta para implantes de carga imediata (recuperação do sorriso em 1 dia), avaliação ortodôntica ou solicite atendimento domiciliar em Manaus com o Dr. Fernando." />
+                  <ScrubbedParagraph text="Agende sua consulta na Clinica Prontodonto para implantes de carga imediata, avaliação ortodôntica ou solicite atendimento domiciliar em Manaus com nossa equipe especializada." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -67,7 +67,7 @@ export default function BookAppointmentPage() {
                     Prefere falar diretamente conosco agora? Clique abaixo para abrir o WhatsApp.
                   </p>
                   <a
-                    href="https://api.whatsapp.com/send?phone=5568981081266"
+                    href={CLINIC_INFO.contact.whatsappLink || `https://api.whatsapp.com/send?phone=5592991201714&text=Seja+bem+vindo+a+Prontodonto%21`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-display text-17 text-forest font-semibold block hover:underline"
@@ -106,7 +106,7 @@ export default function BookAppointmentPage() {
                 {BOOKING_STEPS.map((step, idx) => (
                   <AnimateOnScroll key={step.step} animation="fade-up" delay={idx * 0.1}>
                     <div className="flex items-start gap-4 p-4 bg-paper border border-mist shadow-sm">
-                      <span className="w-8 h-8 rounded-full bg-forest text-paper flex items-center justify-center font-display text-15 flex-shrink-0">
+                      <span className="w-8 h-8 rounded-full bg-forest text-paper-on-dark flex items-center justify-center font-display text-15 flex-shrink-0">
                         {step.step}
                       </span>
                       <div>
@@ -145,7 +145,7 @@ export default function BookAppointmentPage() {
                 <div className="space-y-3 font-body text-13 text-forest-ink/80">
                   <div>
                     <span className="text-forest-ink/60 block">WhatsApp:</span>
-                    <a href="https://api.whatsapp.com/send?phone=5568981081266" target="_blank" rel="noopener noreferrer" className="font-medium text-forest hover:underline">
+                    <a href={CLINIC_INFO.contact.whatsappLink || `https://api.whatsapp.com/send?phone=5592991201714&text=Seja+bem+vindo+a+Prontodonto%21`} target="_blank" rel="noopener noreferrer" className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.whatsapp}
                     </a>
                   </div>
@@ -179,14 +179,14 @@ export default function BookAppointmentPage() {
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Localização</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Studio Oral Vitta em Rio Branco</h3>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Clinica Prontodonto em Manaus</h3>
                 <address className="not-italic font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  {CLINIC_INFO.primaryLocation.street} - {CLINIC_INFO.primaryLocation.suite}
+                  {CLINIC_INFO.primaryLocation.street}
                   <br />
                   {CLINIC_INFO.primaryLocation.city} - {CLINIC_INFO.primaryLocation.state}, {CLINIC_INFO.primaryLocation.postalCode}, Brasil
                 </address>
                 <p className="font-body text-13 text-forest-ink/60">
-                  Plus Code: 25GC+M3 Floresta, Rio Branco - Acre.
+                  Plus Code: {CLINIC_INFO.primaryLocation.landmarks}
                 </p>
               </div>
             </AnimateOnScroll>

@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Studio Oral Vitta | Clínica Odontológica em Rio Branco - AC',
+  title: 'Clinica Prontodonto | Clínica Odontológica em Manaus - AM',
   description:
-    'Studio Oral Vitta (5.0 ★ no Google Maps), clínica odontológica em Floresta, Rio Branco - AC.',
+    'Clinica Prontodonto (4.7 ★ no Google Maps com 42 avaliações), clínica odontológica em Compensa 1, Manaus - AM.',
   pathname: '/',
 });
 

@@ -18,7 +18,7 @@ const service = SERVICES.find((s) => s.slug === 'braces')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Aparelhos Ortodônticos & Aligners em Manaus | Dr. Fernando',
+  title: 'Aparelhos Ortodônticos & Aligners em Manaus | Dr. Luis Carlos Buco',
   description:
     'Aparelhos ortodônticos convencionais, estéticos e alinhadores em Manaus com planejamento cuidadoso e atendimento humanizado.',
   pathname: '/braces/',
@@ -419,14 +419,14 @@ export default function BracesPage() {
       </section>
 
       {/* SECTION 11: Appointment CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Start Alignment
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
                 Schedule your 3D orthodontic scan
               </h2>
             </div>

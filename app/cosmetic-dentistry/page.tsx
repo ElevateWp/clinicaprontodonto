@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'cosmetic-dentistry')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Odontologia Estética & Facetas em Manaus | Dr. Fernando',
+  title: 'Odontologia Estética & Facetas em Manaus | Dr. Luis Carlos Buco',
   description:
-    'Lentes de contato dental, facetas cerâmicas e estética do sorriso pelo Dr. Fernando em Manaus.',
+    'Lentes de contato dental, facetas cerâmicas e estética do sorriso pelo Dr. Luis Carlos Buco em Manaus.',
   pathname: '/cosmetic-dentistry/',
 });
 
@@ -269,13 +269,7 @@ export default function CosmeticDentistryPage() {
             <div className="p-8 md:p-12 bg-paper border border-mist grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-sm">
               <div className="lg:col-span-3">
                 <div className="relative aspect-square bg-mist overflow-hidden border border-mist">
-                  <Image
-                    src={leadDentist.image}
-                    alt={leadDentist.name}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 25vw"
-                    className="object-cover object-top"
-                  />
+                  <Image src={leadDentist.image} alt={leadDentist.name} fill sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover object-center" />
                 </div>
               </div>
               <div className="lg:col-span-9">
@@ -369,14 +363,14 @@ export default function CosmeticDentistryPage() {
       </section>
 
       {/* SECTION 10: Appointment CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Transform Your Smile
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
                 Schedule your Digital Smile Design consultation
               </h2>
             </div>

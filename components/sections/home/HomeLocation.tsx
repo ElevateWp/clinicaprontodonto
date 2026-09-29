@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useMemo } from 'react';
-import Image from 'next/image';
 import { CLINIC_INFO } from '@/lib/clinic-data';
 import Button from '@/components/ui/Button';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
@@ -21,7 +20,7 @@ export default function HomeLocation() {
               Localização & Horário de Atendimento
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              Visite o Consultório em Rio Branco
+              Visite o Consultório em Manaus
             </h2>
           </div>
         </AnimateOnScroll>
@@ -41,7 +40,7 @@ export default function HomeLocation() {
                   {CLINIC_INFO.primaryLocation.postalCode}, {CLINIC_INFO.primaryLocation.country}
                 </address>
                 <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
-                  {CLINIC_INFO.primaryLocation.landmarks}
+                  Plus Code: {CLINIC_INFO.primaryLocation.landmarks}
                 </p>
               </div>
             </AnimateOnScroll>
@@ -103,17 +102,13 @@ export default function HomeLocation() {
           {/* Columns 7–12: Physical Storefront Photo & Location Info */}
           <div className="lg:col-span-6 flex flex-col space-y-6">
             <AnimateOnScroll animation="fade-left" duration={0.85}>
-              <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
-                <Image
-                  src="/images/vitta-clinic-exterior.png"
-                  alt="Studio Oral Vitta - Clínica odontológica em Rio Branco"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-                <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  Studio Oral Vitta • Rio Branco
+              <div className="aspect-[16/10] bg-forest text-paper-on-dark border border-mist shadow-sm p-8 md:p-10 flex flex-col justify-between">
+                <span className="font-body text-13 text-lime uppercase tracking-wider font-semibold">Compensa 1 · Manaus</span>
+                <div>
+                  <p className="font-display text-26 md:text-33 text-paper-on-dark mb-3">Estamos na Avenida Brasil</p>
+                  <p className="font-body text-15 text-paper-on-dark/80 leading-relaxed">Avenida Brasil, 12A, Compensa 1, Manaus - AM, 69036-110.</p>
                 </div>
+                <a href={`https://maps.google.com/?q=${encodeURIComponent(CLINIC_INFO.primaryLocation.directions)}`} className="font-body text-15 text-lime underline underline-offset-4">Ver rotas no Google Maps</a>
               </div>
             </AnimateOnScroll>
 
@@ -124,10 +119,10 @@ export default function HomeLocation() {
                     Atendimento Odontológico de Excelência
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Clínica odontológica em Floresta
+                    Clínica odontológica em Compensa 1
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Studio Oral Vitta, na região de Floresta, em Rio Branco, Acre.
+                    Clinica Prontodonto, localizada na Avenida Brasil, Compensa 1, em Manaus, Amazonas.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />

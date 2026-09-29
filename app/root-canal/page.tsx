@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'root-canal')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Tratamento de Canal em Manaus | Dr. Fernando',
+  title: 'Tratamento de Canal em Manaus | Dr. Luis Carlos Buco',
   description:
-    'Tratamento de canal moderno, seguro e sem dor em Manaus com Dr. Fernando na Dental Studio.',
+    'Tratamento de canal moderno, seguro e sem dor em Manaus com Dr. Luis Carlos Buco na Dental Studio.',
   pathname: '/root-canal/',
 });
 
@@ -319,13 +319,7 @@ export default function RootCanalPage() {
             <div className="p-8 md:p-12 bg-paper border border-mist grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-sm">
               <div className="lg:col-span-3">
                 <div className="relative aspect-square bg-mist overflow-hidden border border-mist">
-                  <Image
-                    src={leadDentist.image}
-                    alt={leadDentist.name}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 25vw"
-                    className="object-cover object-top"
-                  />
+                  <Image src={leadDentist.image} alt={leadDentist.name} fill sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover object-center" />
                 </div>
               </div>
               <div className="lg:col-span-9">
@@ -359,14 +353,14 @@ export default function RootCanalPage() {
       </section>
 
       {/* SECTION 11: Appointment CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Relieve Pain
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
                 Schedule your root canal consultation
               </h2>
             </div>
@@ -376,7 +370,7 @@ export default function RootCanalPage() {
               <Button href="/book-appointment/" variant="lime" size="lg">
                 Book Appointment
               </Button>
-              <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
+              <Button href="/contact/" variant="ghost" size="lg" className="text-paper-on-dark border-paper/30 hover:border-paper hover:bg-paper/10">
                 Contact Clinic
               </Button>
             </div>

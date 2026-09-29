@@ -70,31 +70,31 @@ export default function BookingForm() {
 
   if (isSubmitted) {
     return (
-      <div className="p-8 md:p-12 bg-forest text-paper transition-all duration-500 ease-nova-ease">
+      <div className="p-8 md:p-12 bg-forest text-paper-on-dark transition-all duration-500 ease-nova-ease">
         <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
           Request Received
         </span>
-        <h3 className="font-display text-33 md:text-41 text-paper mb-4">
+        <h3 className="font-display text-33 md:text-41 text-paper-on-dark mb-4">
           Appointment requested
         </h3>
-        <p className="font-body text-17 text-paper/90 leading-relaxed mb-6">
+        <p className="font-body text-17 text-paper-on-dark/90 leading-relaxed mb-6">
           Thank you, {formData.fullName}. Our clinical coordinator will review your requested treatment and telephone you at <strong className="text-lime">{formData.phone}</strong> within two business hours to confirm your exact visit time.
         </p>
 
         <div className="p-6 bg-paper/10 border border-mist/20 mb-8 space-y-2 font-body text-15">
           <div className="flex justify-between">
-            <span className="text-paper/60">Requested Service:</span>
-            <span className="text-paper font-medium">
+            <span className="text-paper-on-dark/60">Requested Service:</span>
+            <span className="text-paper-on-dark font-medium">
               {SERVICES.find((s) => s.slug === formData.service)?.name || formData.service}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-paper/60">Preferred Date:</span>
-            <span className="text-paper font-medium">{formData.preferredDate}</span>
+            <span className="text-paper-on-dark/60">Preferred Date:</span>
+            <span className="text-paper-on-dark font-medium">{formData.preferredDate}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-paper/60">Preferred Window:</span>
-            <span className="text-paper font-medium">{formData.preferredTime}</span>
+            <span className="text-paper-on-dark/60">Preferred Window:</span>
+            <span className="text-paper-on-dark font-medium">{formData.preferredTime}</span>
           </div>
         </div>
 
@@ -114,13 +114,13 @@ export default function BookingForm() {
                 notes: '',
               });
             }}
-            className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10"
+            className="text-paper-on-dark border-paper/30 hover:border-paper hover:bg-paper/10"
           >
             Submit another request
           </Button>
           <a
             href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
-            className="font-body text-13 text-paper/80 hover:text-lime underline underline-offset-4"
+            className="font-body text-13 text-paper-on-dark/80 hover:text-lime underline underline-offset-4"
           >
             Need immediate assistance? Call {CLINIC_INFO.contact.phone}
           </a>
@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#766E63] transition-all duration-200">
+          <span className="font-body text-13 text-[#614A70] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -187,7 +187,7 @@ export default function BookingForm() {
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#766E63]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#614A70]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#766E63]">{errors.email}</span>
+            <span className="font-body text-13 text-[#614A70]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -253,7 +253,7 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#766E63]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#614A70]">{errors.preferredDate}</span>
           )}
         </div>
 

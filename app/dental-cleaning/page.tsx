@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-cleaning')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Limpeza Dental & Profilaxia em Manaus | Dr. Fernando',
+  title: 'Limpeza Dental & Profilaxia em Manaus | Dr. Luis Carlos Buco',
   description:
-    'Profilaxia e limpeza dental com ultrassom para prevenção de tártaro e gengivite no Consultório Odontológico Dr. Fernando em Manaus.',
+    'Profilaxia e limpeza dental com ultrassom para prevenção de tártaro e gengivite no Consultório Odontológico Dr. Luis Carlos Buco em Manaus.',
   pathname: '/dental-cleaning/',
 });
 
@@ -356,14 +356,14 @@ export default function DentalCleaningPage() {
       </section>
 
       {/* SECTION 10: Appointment CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Preventive Health
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
                 Schedule your guided airflow cleaning
               </h2>
             </div>

@@ -39,7 +39,7 @@ export default function Accordion({ items, className = '', theme = 'paper' }: Ac
               <span
                 className={`font-display text-17 md:text-21 transition-colors ${
                   isForest
-                    ? 'text-paper group-hover:text-lime'
+                    ? 'text-paper-on-dark group-hover:text-lime'
                     : 'text-forest-ink group-hover:text-forest'
                 }`}
               >
@@ -75,7 +75,7 @@ export default function Accordion({ items, className = '', theme = 'paper' }: Ac
               <div className="min-h-0">
                 <p
                   className={`font-body text-15 md:text-17 leading-relaxed ${
-                    isForest ? 'text-paper/80' : 'text-forest-ink/80'
+                    isForest ? 'text-paper-on-dark/80' : 'text-forest-ink/80'
                   }`}
                 >
                   {item.answer}
@@ -87,7 +87,7 @@ export default function Accordion({ items, className = '', theme = 'paper' }: Ac
                       href={item.relatedLink.href}
                       className={`font-body text-13 underline underline-offset-4 ${
                         isForest
-                          ? 'text-lime hover:text-paper'
+                          ? 'text-lime hover:text-paper-on-dark'
                           : 'text-forest hover:text-forest-light'
                       }`}
                     >

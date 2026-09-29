@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Dr. Fernando',
+      name: author?.name || 'Dr. Luis Carlos Buco',
     },
     publisher: {
       '@type': 'Organization',
@@ -113,12 +113,9 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
               {author && (
                 <div className="flex items-center gap-4 p-4 border border-mist bg-paper/60 shadow-sm">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden bg-mist flex-shrink-0">
-                    <Image
-                      src={author.image}
-                      alt={author.name}
-                      fill
-                      className="object-cover object-top"
-                    />
+<span className="w-full h-full flex items-center justify-center bg-forest text-paper-on-dark font-display text-17" aria-label={`Profile for ${author.name}`}>
+                      {author.name.split(/\s+/).map((part) => part[0]).slice(0, 2).join('')}
+                    </span>
                   </div>
                   <div>
                     <Link
@@ -218,14 +215,14 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
       )}
 
       {/* Appointment CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Clinical Care
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
                 Discuss your case with our clinical team
               </h2>
             </div>

@@ -29,9 +29,7 @@ export async function generateMetadata({ params }: DentistProfileProps): Promise
   return createMetadata({
     title: `${dentist.name} | ${dentist.title}`,
     description: dentist.bio,
-    pathname: `/dentists/${dentist.slug}/`,
-    image: dentist.image,
-  });
+    pathname: `/dentists/${dentist.slug}/`,  });
 }
 
 export default function SingleDentistPage({ params }: DentistProfileProps) {
@@ -45,9 +43,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
     '@type': 'Person',
     name: dentist.name,
     jobTitle: dentist.title,
-    description: dentist.bio,
-    image: dentist.image,
-    worksFor: {
+    description: dentist.bio,    worksFor: {
       '@type': 'Dentist',
       name: CLINIC_INFO.name,
     },
@@ -67,7 +63,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Dr. Fernando', path: '/dentists/' },
+              { name: 'Dr. Luis Carlos Buco', path: '/dentists/' },
               { name: dentist.name, path: `/dentists/${dentist.slug}/` },
             ]}
           />
@@ -77,14 +73,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div className="relative aspect-[4/5] bg-mist overflow-hidden border border-mist shadow-sm">
-                  <Image
-                    src={dentist.image}
-                    alt={`Retrato de ${dentist.name}`}
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover object-top"
-                  />
+<Image src={dentist.image} alt={dentist.name} fill sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover object-center" />
                 </div>
                 {dentist.experienceYears > 0 && <div className="mt-4 p-4 bg-mist/40 border border-mist flex justify-between text-13 font-body text-forest-ink/80">
                   <span>Prática Clínica:</span>
@@ -210,14 +199,14 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
       )}
 
       {/* Direct Scheduling CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Agendamento Direto
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
                 Deseja agendar sua consulta com {dentist.name}?
               </h2>
             </div>

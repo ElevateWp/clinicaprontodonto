@@ -13,7 +13,7 @@ const HOME_FAQS: AccordionItem[] = [
   },
   {
     question: 'O consultório realiza atendimento de odontologia domiciliar em Manaus?',
-    answer: 'Sim! O Dr. Fernando oferece atendimento domiciliar especializado para pacientes idosos, acamados ou com dificuldades de locomoção, com equipamentos portáteis modernos.',
+    answer: 'Sim! Oferecemos atendimento domiciliar especializado para pacientes idosos, acamados ou com dificuldades de locomoção, com equipamentos portáteis modernos.',
     relatedLink: { href: '/contact/', label: 'Solicitar Atendimento Domiciliar →' },
   },
   {
@@ -27,8 +27,8 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/book-appointment/', label: 'Agendar Consulta Online →' },
   },
   {
-    question: 'Onde fica localizada a Studio Oral Vitta em Rio Branco?',
-    answer: 'Rua Primeiro de Maio, R. Boa Vista, 7 - Conjunto - Floresta, Rio Branco - AC, 69911-331, Brazil. Plus Code: 25GC+M3 Floresta, Rio Branco - Acre, Brazil.',
+    question: 'Onde fica localizada a Clinica Prontodonto em Manaus?',
+    answer: 'Avenida Brasil, 12A Compensa 1, Manaus - AM, 69036-110, Brazil. Plus Code: VWVW+2R Manaus, Amazonas, Brazil.',
     relatedLink: { href: '/contact/', label: 'Ver Mapa e Rotas no Google Maps →' },
   },
 ];
@@ -47,7 +47,7 @@ export default function HomeFaqs() {
               Perguntas frequentes sobre nossos tratamentos
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Respostas claras sobre implantes de carga imediata, aparelhos ortodônticos e atendimento odontológico na Dental Studio em Manaus.
+              Respostas claras sobre implantes de carga imediata, aparelhos ortodônticos e atendimento odontológico na Clinica Prontodonto em Manaus.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
@@ -57,7 +57,7 @@ export default function HomeFaqs() {
                 Fale diretamente conosco pelo WhatsApp e tire todas as suas dúvidas.
               </p>
               <a
-                href={`https://api.whatsapp.com/send?phone=5568981081266`}
+                href={CLINIC_INFO.contact.whatsappLink || `https://api.whatsapp.com/send?phone=5592991201714&text=Seja+bem+vindo+a+Prontodonto%21`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"

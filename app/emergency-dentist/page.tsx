@@ -10,7 +10,7 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata, generateFaqSchema } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Atendimento Odontológico de Urgência em Manaus | Dr. Fernando',
+  title: 'Atendimento Odontológico de Urgência em Manaus | Dr. Luis Carlos Buco',
   description:
     'Atendimento odontológico para dor de dente intensa, dente quebrado ou emergências em Manaus. WhatsApp/Telefone: +55 92 99265-6280.',
   pathname: '/emergency-dentist/',
@@ -23,7 +23,7 @@ const EMERGENCY_FAQS = [
   },
   {
     question: 'O consultório oferece atendimento domiciliar de urgência?',
-    answer: 'Sim, o Dr. Fernando realiza odontologia domiciliar para pacientes acamados ou com limitações de locomoção em Manaus.',
+    answer: 'Sim, o Dr. Luis Carlos Buco realiza odontologia domiciliar para pacientes acamados ou com limitações de locomoção em Manaus.',
   },
   {
     question: 'O que fazer caso um dente quebre ou caia por trauma?',
@@ -73,19 +73,19 @@ export default function EmergencyDentistPage() {
               </AnimateOnScroll>
             </div>
 
-            <div className="lg:col-span-4 p-6 bg-forest text-paper">
+            <div className="lg:col-span-4 p-6 bg-forest text-paper-on-dark">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-lime font-medium uppercase tracking-wider block mb-2">
                 Walk-In Clinical Location
               </span>
-              <address className="not-italic font-body text-15 text-paper leading-relaxed mb-4">
+              <address className="not-italic font-body text-15 text-paper-on-dark leading-relaxed mb-4">
                 {CLINIC_INFO.name}
                 <br />
                 {CLINIC_INFO.primaryLocation.street}, {CLINIC_INFO.primaryLocation.suite}
                 <br />
                 {CLINIC_INFO.primaryLocation.city}, {CLINIC_INFO.primaryLocation.state} {CLINIC_INFO.primaryLocation.postalCode}
               </address>
-              <div className="pt-3 border-t border-mist/20 text-13 text-paper/80 font-body">
+              <div className="pt-3 border-t border-mist/20 text-13 text-paper-on-dark/80 font-body">
                 Civic Center Plaza • Direct Ground Floor Elevator
               </div>
               </AnimateOnScroll>
@@ -249,7 +249,7 @@ export default function EmergencyDentistPage() {
       </section>
 
       {/* SECTION 6 & 7: Same-Day Information & Direct Emergency Contact */}
-      <section className="py-16 md:py-24 border-b border-mist bg-forest text-paper">
+      <section className="py-16 md:py-24 border-b border-mist bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-8">
@@ -257,10 +257,10 @@ export default function EmergencyDentistPage() {
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Immediate Telephone Triage
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper mb-4">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark mb-4">
                 Speak directly with our on-call dental team
               </h2>
-              <p className="font-body text-17 text-paper/90 leading-relaxed mb-8 max-w-2xl">
+              <p className="font-body text-17 text-paper-on-dark/90 leading-relaxed mb-8 max-w-2xl">
                 We accept emergency calls 24 hours a day, 7 days a week. Our clinical staff will immediately assess your symptoms, advise on pain management, and prepare our surgical suite for your arrival.
               </p>
               <div className="flex flex-wrap items-center gap-4">
@@ -276,7 +276,7 @@ export default function EmergencyDentistPage() {
                   href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                   variant="ghost"
                   size="lg"
-                  className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10"
+                  className="text-paper-on-dark border-paper/30 hover:border-paper hover:bg-paper/10"
                 >
                   WhatsApp Clinical Desk
                 </Button>
@@ -289,7 +289,7 @@ export default function EmergencyDentistPage() {
               <span className="font-body text-13 text-lime block mb-2 font-medium">
                 Walk-In Triage Policy
               </span>
-              <p className="font-body text-13 text-paper/80 leading-relaxed">
+              <p className="font-body text-13 text-paper-on-dark/80 leading-relaxed">
                 While we recommend calling ahead so we can prepare a sterile suite, true acute dental trauma walk-ins are welcomed directly at our Civic Center pavilion during business hours.
               </p>
               </AnimateOnScroll>
@@ -370,14 +370,14 @@ export default function EmergencyDentistPage() {
       </section>
 
       {/* SECTION 10: Final Emergency Action CTA */}
-      <section className="py-16 md:py-24 bg-forest text-paper">
+      <section className="py-16 md:py-24 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 text-center flex flex-col items-center">
           <AnimateOnScroll animation="fade-up" duration={0.8} className="flex flex-col items-center">
-          <h2 className="font-display text-33 md:text-41 text-paper mb-4">
+          <h2 className="font-display text-33 md:text-41 text-paper-on-dark mb-4">
             Do not endure severe dental pain.
           </h2>
-          <p className="font-body text-15 md:text-17 text-paper/80 mb-8 max-w-xl">
-            Dr. Fernando is here to help relieve your pain and preserve your natural tooth structure.
+          <p className="font-body text-15 md:text-17 text-paper-on-dark/80 mb-8 max-w-xl">
+            Dr. Luis Carlos Buco is here to help relieve your pain and preserve your natural tooth structure.
           </p>
           <Button
             href={`tel:${CLINIC_INFO.contact.emergencyPhone.replace(/[^0-9+]/g, '')}`}

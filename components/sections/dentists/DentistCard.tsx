@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import { DentistProfile } from '@/lib/clinic-data';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
@@ -23,23 +23,14 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
       >
         {/* Portrait frame with dual image crossfade on paper-toned ground */}
         <div className="relative w-full aspect-[4/5] bg-mist overflow-hidden border border-mist mb-5 rounded-none shadow-sm">
-          {/* Primary Clinical Portrait */}
-          <Image
-            src={dentist.image}
-            alt={`Clinical portrait of ${dentist.name}, ${dentist.title}`}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-            className={`object-cover object-top transition-all duration-500 ease-nova-ease ${
-              isHovered ? 'scale-105' : 'scale-100'
-            }`}
-          />
+          <Image src={dentist.image} alt={dentist.name} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-center" />
 
           <div className="absolute top-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium shadow-sm">
             {dentist.qualifications}
           </div>
 
           {dentist.experienceYears > 0 && (
-            <div className="absolute bottom-3 right-3 bg-forest text-paper font-body text-13 px-2.5 py-0.5">
+            <div className="absolute bottom-3 right-3 bg-forest text-paper-on-dark font-body text-13 px-2.5 py-0.5">
               {dentist.experienceYears}+ Yrs Experience
             </div>
           )}

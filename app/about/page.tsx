@@ -14,17 +14,17 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Sobre o Consultório | Dr. Fernando',
+  title: 'Sobre a Clínica | Clinica Prontodonto',
   description:
-    'Conheça o Consultório Odontológico Dr. Fernando em Manaus: referência em implantes de carga imediata em 1 dia, odontologia domiciliar e aparelhos ortodônticos.',
+    'Conheça a Clinica Prontodonto em Manaus: referência em implantes de carga imediata em 1 dia, odontologia domiciliar, aparelhos ortodônticos e atendimento humanizado.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
     year: '2012',
-    title: 'Fundação do Consultório em Manaus',
-    description: 'Dr. Fernando estabelece a clínica com foco em reabilitação oral, implantodontia de excelência e atendimento odontológico domiciliar.',
+    title: 'Fundação da Clínica em Manaus',
+    description: 'Estabelecida com foco em reabilitação oral, implantodontia de excelência e atendimento odontológico humanizado em Manaus.',
   },
   {
     year: '2016',
@@ -39,7 +39,7 @@ const TIMELINE = [
   {
     year: '2024',
     title: 'Excelência em Ortodontia & Estética',
-    description: 'Integração de aparelhos estéticos, alinhadores e novos protocolos de clareamento e restaurações estéticas com o Dr. Fernando.',
+    description: 'Integração de aparelhos estéticos, alinhadores e novos protocolos de clareamento e restaurações estéticas.',
   },
 ];
 
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 </span>
                 <WordRevealH1 text="Compromisso com seu sorriso, agilidade e excelência técnica." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Na Dental Studio, Dr. Fernando atende pacientes que buscam tratamentos modernos de implantes de carga imediata, aparelhos ortodônticos e atendimento odontológico acolhedor em Manaus." />
+                  <ScrubbedParagraph text="Na Clinica Prontodonto, atendemos pacientes que buscam tratamentos modernos de implantes, aparelhos ortodônticos e atendimento odontológico acolhedor com conforto e segurança em Manaus." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Responsável Técnico</span>
-                    <span className="font-medium text-forest">Dr. Fernando</span>
+                    <span className="font-medium text-forest">Dr. Luis Carlos Buco</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Registro</span>
@@ -110,10 +110,10 @@ export default function AboutPage() {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-2xl mb-16">
-              <span className="font-body text-13 text-paper/60 uppercase tracking-wider block mb-2 font-medium">
+              <span className="font-body text-13 text-paper-on-dark/60 uppercase tracking-wider block mb-2 font-medium">
                 Trajetória da Prática
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
                 Nossa Evolução Clínica
               </h2>
             </div>
@@ -132,10 +132,10 @@ export default function AboutPage() {
                 <span className="font-display text-21 text-lime block mb-1">
                   {item.year}
                 </span>
-                <h3 className="font-display text-21 md:text-26 text-paper mb-2">
+                <h3 className="font-display text-21 md:text-26 text-paper-on-dark mb-2">
                   {item.title}
                 </h3>
-                <p className="font-body text-15 text-paper/80 leading-relaxed">
+                <p className="font-body text-15 text-paper-on-dark/80 leading-relaxed">
                   {item.description}
                 </p>
               </AnimateOnScroll>
@@ -184,7 +184,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Dr. Fernando */}
+      {/* SECTION 4: Dr. Luis Carlos Buco */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -194,7 +194,7 @@ export default function AboutPage() {
                   Profissional
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Dr. Fernando
+                  Dr. Luis Carlos Buco
                 </h2>
               </div>
               <Link
@@ -247,8 +247,8 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
-                      src="/images/vitta-treatment-room.png"
-                      alt="Sala de atendimento odontológico da Studio Oral Vitta"
+                      src="/images/prontodonto-treatment-room.jpg"
+                      alt="Sala de tratamento da Clinica Prontodonto"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
@@ -264,79 +264,47 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 6: Visual Tour */}
+      {/* SECTION 6: Clinic Details */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
-              <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Ambiente Clínico
-              </span>
-              <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Nosso Espaço em Manaus
-              </h2>
+              <span className="font-body text-13 text-forest-ink/70 block mb-2 font-medium uppercase tracking-wider">Ambiente Clínico</span>
+              <h2 className="font-display text-33 md:text-41 text-forest-ink">Nosso Espaço em Manaus</h2>
             </div>
           </AnimateOnScroll>
-
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <AnimateOnScroll animation="zoom-in" delay={0.1}>
-              <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
-                <Image
-                  src="/images/vitta-reception.jpg"
-                  alt="Recepção do consultório"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-                <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Recepção
+            {[
+              ['Recepção', 'Atendimento acolhedor desde a chegada à clínica.'],
+              ['Consultórios', 'Ambiente preparado para avaliações e tratamentos odontológicos.'],
+              ['Localização', 'Avenida Brasil, 12A, Compensa 1, Manaus - AM.'],
+            ].map(([title, description], index) => (
+              <AnimateOnScroll key={title} animation="fade-up" delay={index * 0.1}>
+                <div className="h-full min-h-52 p-6 bg-forest text-paper-on-dark border border-mist shadow-sm flex flex-col justify-between">
+                  <span className="font-body text-13 text-lime uppercase tracking-wider">0{index + 1}</span>
+                  <div>
+                    <h3 className="font-display text-21 text-paper-on-dark mb-2">{title}</h3>
+                    <p className="font-body text-15 text-paper-on-dark/80 leading-relaxed">{description}</p>
+                  </div>
                 </div>
-              </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll animation="zoom-in" delay={0.2}>
-              <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
-                <Image
-                  src="/images/vitta-consultation-room.jpg"
-                  alt="Sala de atendimento e avaliação"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-                <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Consultório
-                </div>
-              </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll animation="zoom-in" delay={0.3}>
-              <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
-                <Image
-                  src="/images/vitta-clinic-exterior.png"
-                  alt="Entrada do consultório"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
-                />
-                <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Fachada
-                </div>
-              </div>
-            </AnimateOnScroll>
+              </AnimateOnScroll>
+            ))}
           </div>
         </div>
       </section>
 
       {/* SECTION 7: Appointment CTA */}
-      <section className="py-20 md:py-28 bg-forest text-paper">
+      <section className="py-20 md:py-28 bg-forest text-paper-on-dark">
         <div className="max-w-site mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
                 Agendamento
               </span>
-              <h2 className="font-display text-33 md:text-41 text-paper">
-                Agende sua avaliação com o Dr. Fernando
+              <h2 className="font-display text-33 md:text-41 text-paper-on-dark">
+                Agende sua avaliação com o Dr. Luis Carlos Buco
               </h2>
-              <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
+              <p className="font-body text-15 text-paper-on-dark/80 mt-2 max-w-xl">
                 Atendimento no consultório em Manaus e serviço de odontologia domiciliar com agilidade e qualidade.
               </p>
             </div>
@@ -346,7 +314,7 @@ export default function AboutPage() {
               <Button href="/book-appointment/" variant="lime" size="lg">
                 Solicitar Agendamento
               </Button>
-              <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
+              <Button href="/contact/" variant="ghost" size="lg" className="text-paper-on-dark border-paper/30 hover:border-paper hover:bg-paper/10">
                 Ver Contatos
               </Button>
             </div>

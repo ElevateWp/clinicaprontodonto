@@ -95,7 +95,7 @@ export default function ProcedurePin({
                     <span
                       className={`w-6 h-6 rounded-full flex items-center justify-center text-13 border ${
                         activeStep === idx
-                          ? 'border-forest bg-forest text-paper'
+                          ? 'border-forest bg-forest text-paper-on-dark'
                           : 'border-mist bg-transparent text-forest-ink/40'
                       }`}
                     >
